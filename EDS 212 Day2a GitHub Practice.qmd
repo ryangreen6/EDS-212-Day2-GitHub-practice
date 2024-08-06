@@ -15,3 +15,5 @@ usethis::use_github()
 
 ## to send it online, click the Push button at the top of the commit window. It will be sent!
 
+## Now we're in the second half of Day 2, making changes to this project ----
+

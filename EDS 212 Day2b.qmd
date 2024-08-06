@@ -1,0 +1,100 @@
+---
+title: "EDS 212 Day2b excersises"
+author: "Ryan Green"
+format: html
+editor: visual
+---
+
+## oops I spelled exercises wrong
+
+## here we go
+
+```{r}
+# load packages here ----
+library(tidyverse)
+
+## we're going to define a random function now
+
+equation1 <- function(x) {
+  3*x^2+4
+}
+
+# now creating a dataframe, with a range of values to evaulate our function across
+
+my_data_range <- data.frame(x=c(1, 100))
+
+# now plotting this function as a continuous curve over our specified range of values in our dataframe
+
+ggplot(data=my_data_range, aes(x=x)) + 
+  geom_function(fun=equation1)
+
+
+```
+
+# let's do another one
+# anotha one
+
+```{r}
+# define a function
+equation2 <- function(x) {
+  
+  (2.4-(5*x^3)+(2.1*x^2))
+  
+}
+
+
+my_data_range_2 <- data.frame(x=c(-50, 50))
+
+
+ggplot(data=my_data_range_2, aes(x=x)) + geom_function(fun=equation2)
+```
+
+```{r}
+# now we'll create another function, C(t)
+
+ct <- function(t) {
+  t^3
+}
+
+# finding the derivative of c(t)
+
+dc_dt <- D(expr=expression(t^3), name="t")
+
+
+# store the derivative as a function. derivative appears in the console
+
+dc_dt_fun <- function(t) {
+  3 * t^2
+}
+
+# now make the dataframe of values
+
+my_data_range <- data.frame(t=c(-5, 5))
+
+# plot the function
+
+ggplot(data=my_data_range, aes(x=t)) + geom_function(fun=ct, color="red") + geom_function(fun=dc_dt_fun, color="blue")
+
+
+```
+
+```{r}
+# creating another expression
+f_xyz <- expression(2 * x * y - 3 * x^2 * z^3)
+
+# taking a partial derivative with respect to x
+
+df_dx <- D(expr=f_xyz, name="x")
+df_dx # run this line to get the answer in the console
+
+# partial derivative with respect to x, from the console: 2 * y - 3 * (2 * x) * z^3
+
+
+```
+
+
+
+
+
+
+
