@@ -6,3 +6,12 @@ editor: visual
 ---
 
 ## hey hey what's up dude
+
+## to send code to github: 
+usethis::use_github()
+
+## then to commit something, click it's box in the Git Tab on the right, then hit Commit!
+## this stores it locally as a new version of the project.
+
+## to send it online, click the Push button at the top of the commit window. It will be sent!
+
